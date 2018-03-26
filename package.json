@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/demidkashirin/project-lvl1-s248#readme",
   "dependencies": {
-    "npm": "^5.8.0",
     "readline-sync": "*"
   },
   "devDependencies": {
