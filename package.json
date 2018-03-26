@@ -1,0 +1,43 @@
+{
+  "name": "brain_games_by_dk",
+  "version": "1.0.0",
+  "description": "my first project",
+  "main": "brain-games.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "scripts": {
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demidkashirin/project-lvl1-s248.git"
+  },
+  "keywords": [
+    "command_line",
+    "iq_games"
+  ],
+  "author": "Demid Kashirin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demidkashirin/project-lvl1-s248/issues"
+  },
+  "homepage": "https://github.com/demidkashirin/project-lvl1-s248#readme",
+  "dependencies": {
+    "npm": "^5.8.0"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*"
+  },
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  }
+}
