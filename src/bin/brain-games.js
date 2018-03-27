@@ -3,4 +3,5 @@
 import { getName, greet } from '..';
 
 console.log('Welcome to the Brain Games');
-console.log(greet(getName()));
+const name = getName();
+console.log(greet(name));
