@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/demidkashirin/project-lvl1-s248#readme",
   "dependencies": {
+    "babel-preset-flow": "^6.23.0",
     "readline-sync": "*"
   },
   "devDependencies": {
