@@ -4,5 +4,5 @@ export const getName = () => {
 	return username;
 };
 export const greet = (username) => {
-	return 'Hello, '+ username + '!';	
+	return 'Hello, '+ username + '!';
 }
