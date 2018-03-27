@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-import { getName, greet, getQuestion } from '..';
+import { getName, greet } from '..';
+import getQuestion from '../games/even';
 
 console.log('Welcome to the Brain Games\nAnswer "yes" if number even otherwise answer "no".\n');
 const name = getName();
