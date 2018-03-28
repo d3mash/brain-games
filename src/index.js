@@ -5,6 +5,6 @@ const greet = () => {
   console.log('Welcome to the Brain Games');
   const name = readlineSync.question('May I have your name?');
   console.log(`Hello, ${name}`);
-  return 'Type brain-even or brain-calc to try games';
+  return 'Type brain-even, brain-calc or brain-gcd to try games';
 };
 export default greet;
