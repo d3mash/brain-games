@@ -1,4 +1,10 @@
 import readlineSync from 'readline-sync';
 
-export const getName = () => readlineSync.question('May I have your name?');
-export const greet = username => `Hello, ${username}!\n`;
+// flow common for all games
+const greet = () => {
+  console.log('Welcome to the Brain Games');
+  const name = readlineSync.question('May I have your name?');
+  console.log(`Hello, ${name}`);
+  return 'Type brain-even or brain-calc to try games';
+};
+export default greet;
