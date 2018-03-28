@@ -1,17 +1,11 @@
-import readlineSync from 'readline-sync';
+const gameCondition = 'Answer "yes" if number even otherwise answer "no".';
 
-const generateNumber = () => Math.floor(Math.random() * 100) + 1;
-const getQuestion = (name, counter) => {
-  const number = generateNumber();
-  const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
-  const answer = readlineSync.question(`Question: ${number}\nYour answer:`);
-  if (answer !== correctAnswer) {
-    return `${answer} is wrong answer :( correct answer is ${correctAnswer}\nLet's try again, ${name}!`;
+const generateQuestion = () => Math.floor(Math.random() * 100) + 1;
+const getAnswer = (number) => {
+  const remainder = number % 2;
+  if (remainder === 0) {
+    return 'yes';
   }
-  console.log('Correct!');
-  if (counter === 2) {
-    return `Congratulations, ${name}!`;
-  }
-  return getQuestion(name, counter + 1);
+  return 'no';
 };
-export default getQuestion;
+export { gameCondition, generateQuestion, getAnswer };
