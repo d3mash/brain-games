@@ -1,32 +1,28 @@
-import readlineSync from 'readline-sync';
-
-const getQuestion = (name, counter) => {
-  const a = Math.floor(Math.random() * 100) + 1;
-  const b = Math.floor(Math.random() * 100) + 1;
+const gameCondition = 'What is the result of the expression?';
+const generateQuestion = () => {
+  const a = Math.floor(Math.random() * 99) + 1;
+  const b = Math.floor(Math.random() * 99) + 1;
   const gen = Math.floor(Math.random() * 3) + 1;
-  let sign = '';
-  let correctAnswer = 0;
-  switch (gen) {
-    case 1: {
-      sign += '+';
-      correctAnswer += a + b;
-      break; }
-    case 2: {
-      sign += '-';
-      correctAnswer += a - b;
-      break; }
-    default: {
-      sign += '*';
-      correctAnswer += a * b; }
-  }
-  const answer = readlineSync.question(`Question: ${a} ${sign} ${b}\nYour answer:`);
-  if (String(answer) === String(correctAnswer)) {
-    console.log('Correct!');
-    if (counter === 2) {
-      return `Congratulations, ${name}!`;
+  const sign = (ran) => {
+    switch (ran) {
+      case 1:
+        return '+';
+      case 2:
+        return '-';
+      default:
+        return '*';
     }
-    return getQuestion(name, counter + 1);
-  }
-  return `${answer} is wrong answer :( correct answer is ${correctAnswer}\nLet's try again, ${name}!`;
+  };
+  return `${a} ${sign(gen)} ${b}`;
 };
-export default getQuestion;
+const getAnswer = (expression) => {
+  const a = Number(expression[0] + expression[1]);
+  const b = Number(expression[expression.length - 2] + expression[expression.length - 1]);
+  if (expression.indexOf('+') !== -1) {
+    return a + b;
+  } else if (expression.indexOf('-') !== -1) {
+    return a - b;
+  }
+  return a * b;
+};
+export { gameCondition, generateQuestion, getAnswer };
