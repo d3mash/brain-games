@@ -1,6 +1,6 @@
 {
   "name": "brain_games_by_dk",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "my first project",
   "main": "brain-games.js",
   "scripts": {
