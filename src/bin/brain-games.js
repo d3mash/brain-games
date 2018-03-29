@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import greet from '..';
+import game from '..';
 
-console.log(greet());
+game();

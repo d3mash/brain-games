@@ -1,6 +1,6 @@
-import flow from '../flow';
+import game from '..';
 
-const game = () => {
+export default () => {
   const gameCondition = 'Find the greatest common divisor of given numbers.';
   const gcd = (a, b) => {
     if (b === 0) {
@@ -11,14 +11,13 @@ const game = () => {
   const generateQuestion = () => {
     const a = Math.floor(Math.random() * 99) + 1;
     const b = Math.floor(Math.random() * 99) + 1;
-    return `${a} ${b}`;
+    const expr = `${a} ${b}`;
+    const getAnswer = (expression) => {
+      const ae = Number(expression[0] + expression[1]);
+      const be = Number(expression[expression.length - 2] + expression[expression.length - 1]);
+      return gcd(ae, be);
+    };
+    return [expr, getAnswer(expr)];
   };
-  const getAnswer = (expression) => {
-    const a = Number(expression[0] + expression[1]);
-    const b = Number(expression[expression.length - 2] + expression[expression.length - 1]);
-    return gcd(a, b);
-  };
-  return flow(gameCondition, generateQuestion, getAnswer);
+  return game(generateQuestion, gameCondition);
 };
-
-export default game;

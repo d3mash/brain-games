@@ -1,6 +1,6 @@
-import flow from '../flow';
+import game from '..';
 
-const game = () => {
+export default () => {
   const gameCondition = 'What is the result of the expression?';
   const generateQuestion = () => {
     const a = Math.floor(Math.random() * 99) + 1;
@@ -16,18 +16,18 @@ const game = () => {
           return '*';
       }
     };
-    return `${a} ${sign(gen)} ${b}`;
+    const question = `${a} ${sign(gen)} ${b}`;
+    const getAnswer = (expression) => {
+      const ae = Number(expression[0] + expression[1]);
+      const be = Number(expression[expression.length - 2] + expression[expression.length - 1]);
+      if (expression.indexOf('+') !== -1) {
+        return ae + be;
+      } else if (expression.indexOf('-') !== -1) {
+        return ae - be;
+      }
+      return ae * be;
+    };
+    return [question, getAnswer(question)];
   };
-  const getAnswer = (expression) => {
-    const a = Number(expression[0] + expression[1]);
-    const b = Number(expression[expression.length - 2] + expression[expression.length - 1]);
-    if (expression.indexOf('+') !== -1) {
-      return a + b;
-    } else if (expression.indexOf('-') !== -1) {
-      return a - b;
-    }
-    return a * b;
-  };
-  return flow(gameCondition, generateQuestion, getAnswer);
+  return game(generateQuestion, gameCondition);
 };
-export default game;
