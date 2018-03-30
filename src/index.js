@@ -19,7 +19,7 @@ const game = (questionGenerate, gameCondition = '') => {
     if (String(userAnswer) === String(correctAnswer)) {
       console.log('Correct!');
     } else {
-      console.log(`${userAnswer} is wron asnwer:( correct answer was ${correctAnswer}`);
+      console.log(`${userAnswer} is wrong asnwer:( correct answer was ${correctAnswer}`);
       console.log(`Let's try again, ${name}`);
       return;
     }
