@@ -1,7 +1,7 @@
 import game from '..';
 
 export default () => {
-  const gameCondition = 'Find the greatest common divisor of given numbers.';
+  const description = 'Find the greatest common divisor of given numbers.';
   const gcd = (a, b) => {
     if (b === 0) {
       return a;
@@ -19,5 +19,5 @@ export default () => {
     };
     return [expr, getAnswer(expr)];
   };
-  return game(generateQuestion, gameCondition);
+  return game(generateQuestion, description);
 };

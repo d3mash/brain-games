@@ -1,11 +1,11 @@
 import game from '..';
 
 export default () => {
-  const gameCondition = 'Answer "yes" if number even otherwise answer "no".';
+  const description = 'Answer "yes" if number even otherwise answer "no".';
   const generateQuestion = () => {
     const number = Math.floor(Math.random() * 100) + 1;
     const answer = number % 2 === 0 ? 'yes' : 'no';
     return [number, answer];
   };
-  game(generateQuestion, gameCondition);
+  game(generateQuestion, description);
 };

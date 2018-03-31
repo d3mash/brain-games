@@ -1,7 +1,7 @@
 import game from '..';
 
 export default () => {
-  const gameCondition = 'What is the result of the expression?';
+  const description = 'What is the result of the expression?';
   const generateQuestion = () => {
     const a = Math.floor(Math.random() * 99) + 1;
     const b = Math.floor(Math.random() * 99) + 1;
@@ -29,5 +29,5 @@ export default () => {
     };
     return [question, getAnswer(question)];
   };
-  return game(generateQuestion, gameCondition);
+  return game(generateQuestion, description);
 };
