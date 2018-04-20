@@ -18,14 +18,14 @@ export default () => {
     };
     const question = `${a} ${sign(gen)} ${b}`;
     const getAnswer = (expression) => {
-      let a = Number(expression[0] + expression[1]);
-      const be = Number(expression[expression.length - 2] + expression[expression.length - 1]);
+      const first = Number(expression[0] + expression[1]);
+      const second = Number(expression[expression.length - 2] + expression[expression.length - 1]);
       if (expression.indexOf('+') !== -1) {
-        return ae + be;
+        return first + second;
       } else if (expression.indexOf('-') !== -1) {
-        return ae - be;
+        return first - second;
       }
-      return ae * be;
+      return first * second;
     };
     return [question, getAnswer(question)];
   };
