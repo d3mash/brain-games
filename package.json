@@ -1,6 +1,6 @@
 {
   "name": "brain_games_by_dk",
-  "version": "1.8.4",
+  "version": "1.8.5",
   "description": "my first project",
   "main": "brain-games.js",
   "scripts": {
@@ -24,8 +24,6 @@
   },
   "homepage": "https://github.com/demidkashirin/project-lvl1-s248#readme",
   "dependencies": {
-    "babel-preset-flow": "^6.23.0",
-    "npm": "^5.8.0",
     "readline-sync": "*"
   },
   "devDependencies": {
