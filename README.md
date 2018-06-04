@@ -7,9 +7,9 @@
 
 An arithmetics console game.
 Games:
-*brain-calc
-*brain-gcd
-*brain-prime
-*brain-progression
-*brain-even
-*brain-balance
+* brain-calc
+* brain-gcd
+* brain-prime
+* brain-progression
+* brain-even
+* brain-balance
