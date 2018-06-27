@@ -1,6 +1,7 @@
 # Brain Games
-[![Build Status](https://travis-ci.org/d3mash/brain-games.svg?branch=master)](https://travis-ci.org/d3mash/brain-games)
 
+
+[![Build Status](https://travis-ci.org/d3mash/brain-games.svg?branch=master)](https://travis-ci.org/d3mash/brain-games)
 An arithmetics console game.
 ---
 ## Install
